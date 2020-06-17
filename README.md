@@ -13,8 +13,8 @@ Make `clang++` available first.
 You need `freeglut` and `xquartz` to build. To install them through `homebrew`, issue below.
 
 ```bash
-$ brew install freeglut
 $ brew cask install xquartz
+$ brew install freeglut
 
 $ export DISPLAY=:0.0
 ```
