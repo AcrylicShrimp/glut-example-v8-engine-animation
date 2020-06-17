@@ -6,7 +6,7 @@ This project is for a final test from my univ.
 
 ## How to build
 
-## macOS
+### macOS
 
 Make `clang++` available first.
 
