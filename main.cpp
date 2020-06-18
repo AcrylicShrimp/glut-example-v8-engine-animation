@@ -1,8 +1,9 @@
+// macOS에서 발생하는 deprecation 경고를 비활성화 합니다.
 #define GL_SILENCE_DEPRECATION
 
-#include <GL/glut.h>
-#include <chrono>
-#include <cmath>
+#include <GL/glut.h>	// freeglut입니다.
+#include <chrono>		// 시간 계산을 위한 C++11 표준 라이브러리입니다.
+#include <cmath>		// 각종 수학 계산을 위한 표준 라이브러리입니다.
 
 // 실린더를 그리기 위한 GLU 객체를 정의합니다.
 GLUquadricObj *quadratic;
