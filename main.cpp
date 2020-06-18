@@ -104,20 +104,25 @@ void DrawPistons()
 	// 앞쪽 피스톤 구멍
 	glPushMatrix();
 	{
+		// 위치와 각도를 설정합니다.
 		glTranslated(0, 0.9, 0.5);
 		glRotated(-45, 1, 0, 0);
 
 		glTranslated(0, 0, -0.2);
 
+		// #1
 		glTranslated(-0.675, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 
+		// #2
 		glTranslated(0.45, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 
+		// #3
 		glTranslated(0.45, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 
+		// #4
 		glTranslated(0.45, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 	}
@@ -126,20 +131,25 @@ void DrawPistons()
 	// 뒷쪽 피스톤 구멍
 	glPushMatrix();
 	{
+		// 위치와 각도를 설정합니다.
 		glTranslated(0, 0.9, -0.5);
 		glRotated(-135, 1, 0, 0);
 
 		glTranslated(0, 0, -0.2);
 
+		// #1
 		glTranslated(-0.675, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 
+		// #2
 		glTranslated(0.45, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 
+		// #3
 		glTranslated(0.45, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 
+		// #4
 		glTranslated(0.45, 0, 0);
 		gluCylinder(quadratic, 0.21, 0.21, 0.4, 24, 3);
 	}
@@ -158,11 +168,12 @@ void DrawPistons()
 	// 앞쪽 피스톤
 	glPushMatrix();
 	{
+		// 위치와 각도를 설정합니다.
 		glTranslated(0, 0.9, 0.5);
 		glRotated(-45, 1, 0, 0);
 
+		// #1
 		glTranslated(-0.675, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 0) + 1) / 2 * -0.35);
@@ -170,8 +181,8 @@ void DrawPistons()
 		}
 		glPopMatrix();
 
+		// #2
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 1) + 1) / 2 * -0.35);
@@ -179,8 +190,8 @@ void DrawPistons()
 		}
 		glPopMatrix();
 
+		// #3
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 7) + 1) / 2 * -0.35);
@@ -188,8 +199,8 @@ void DrawPistons()
 		}
 		glPopMatrix();
 
+		// #4
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 4) + 1) / 2 * -0.35);
@@ -202,11 +213,12 @@ void DrawPistons()
 	// 뒷쪽 피스톤
 	glPushMatrix();
 	{
+		// 위치와 각도를 설정합니다.
 		glTranslated(0, 0.9, -0.5);
 		glRotated(-135, 1, 0, 0);
 
+		// #1
 		glTranslated(-0.675, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 5) + 1) / 2 * -0.35);
@@ -214,8 +226,8 @@ void DrawPistons()
 		}
 		glPopMatrix();
 
+		// #2
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 6) + 1) / 2 * -0.35);
@@ -223,8 +235,8 @@ void DrawPistons()
 		}
 		glPopMatrix();
 
+		// #3
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 2) + 1) / 2 * -0.35);
@@ -232,8 +244,8 @@ void DrawPistons()
 		}
 		glPopMatrix();
 
+		// #4
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
 			glTranslated(0, 0, (std::cos(angle_rad - offset * 3) + 1) / 2 * -0.35);
@@ -246,72 +258,97 @@ void DrawPistons()
 	// 앞쪽 커넥팅 로드
 	glPushMatrix();
 	{
+		// 위치와 각도를 설정합니다.
 		glTranslated(0, 0.4, 0);
 		glRotated(-45, 1, 0, 0);
 
+		// #1
 		glTranslated(-0.65, 0, 0.3 + 0.175);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 0) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 0) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 0) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
 		glPopMatrix();
 
+		// #2
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 1) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 1) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 1) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
 		glPopMatrix();
 
+		// #3
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 7) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 7) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 7) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
 		glPopMatrix();
 
+		// #4
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 4) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 4) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 4) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
@@ -322,72 +359,97 @@ void DrawPistons()
 	// 뒷쪽 커넥팅 로드
 	glPushMatrix();
 	{
+		// 위치와 각도를 설정합니다.
 		glTranslated(0, 0.4, 0);
 		glRotated(-135, 1, 0, 0);
 
+		// #1
 		glTranslated(-0.65, 0, 0.3 + 0.175);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 5) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 5) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 5) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
 		glPopMatrix();
 
+		// #2
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 6) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 6) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 6) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
 		glPopMatrix();
 
+		// #3
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 2) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 2) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 2) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
 		glPopMatrix();
 
+		// #4
 		glTranslated(0.45, 0, 0);
-
 		glPushMatrix();
 		{
+			// 회전각에 따른 sin과 cos 값을 계산합니다.
 			double sin	 = std::sin(angle_rad - offset * 3) / 2 * 0.35;
 			double cos	 = std::cos(angle_rad - offset * 3) / 2 * 0.35;
 			double cos01 = (std::cos(angle_rad - offset * 3) + 1) / 2 * -0.35;
 
+			// 크랭크와 맞닿게 원 운동을 합니다.
 			glTranslated(0, sin, cos01);
+
+			// 각도를 계산해 끝 점을 기준으로 회전합니다.
 			glTranslated(0, 0, -0.3);
 			glRotated(std::atan2(sin, 0.6 + 0.175 - cos) * 180 / 3.14159265358979, 1, 0, 0);
 			glTranslated(0, 0, 0.3);
+
+			// 크기를 조절하고 큐브를 그립니다.
 			glScaled(0.05, 0.05, 0.6);
 			glutWireCube(1);
 		}
@@ -419,8 +481,9 @@ void DrawCrank()
 		glPushMatrix();
 		{
 			// 저널 베어링
+
+			// #1
 			glTranslated(-0.725, 0.4, 0);
-
 			glPushMatrix();
 			{
 				glRotated(90, 0, 1, 0);
@@ -429,8 +492,8 @@ void DrawCrank()
 			}
 			glPopMatrix();
 
+			// #2
 			glTranslated(0.45, 0, 0);
-
 			glPushMatrix();
 			{
 				glRotated(90, 0, 1, 0);
@@ -439,8 +502,8 @@ void DrawCrank()
 			}
 			glPopMatrix();
 
+			// #3
 			glTranslated(0.45, 0, 0);
-
 			glPushMatrix();
 			{
 				glRotated(90, 0, 1, 0);
@@ -449,8 +512,8 @@ void DrawCrank()
 			}
 			glPopMatrix();
 
+			// #4
 			glTranslated(0.45, 0, 0);
-
 			glPushMatrix();
 			{
 				glRotated(90, 0, 1, 0);
@@ -462,7 +525,6 @@ void DrawCrank()
 		glPopMatrix();
 
 		// 플라이 휠
-
 		glPushMatrix();
 		{
 			glTranslated(-1.135, 0.4, 0);
@@ -474,7 +536,6 @@ void DrawCrank()
 		glPopMatrix();
 
 		// 출력 기어
-
 		glPushMatrix();
 		{
 			glTranslated(1, 0.4, 0);
@@ -491,6 +552,7 @@ void DrawCrank()
 
 void MyDisplay()
 {
+	// 장면이 매번 다시 그려지므로 MyReshape이 아닌 MyDisplay 함수에서 modelview 행렬을 재설정합니다.
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	gluLookAt(5.0, 5.0, 5.0, 0.0, 0.5, 0.0, 0.0, 1.0, 0.0);
